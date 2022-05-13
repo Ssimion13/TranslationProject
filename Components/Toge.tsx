@@ -16,7 +16,7 @@ export default function Toge() {
           wrapperClass="yt-lite"
         />
       </Grid>
-      <Grid container item direction="column" className="textContainer" style={{marginTop: "25vh"}}>
+      <Grid container item direction="column" className="textContainer" style={{marginTop: "30vh"}}>
           {/*(0:00 - 0:35s)*/}
           <Grid className="englishText"> movin' up & down <br/> </Grid>
           

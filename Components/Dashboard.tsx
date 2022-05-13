@@ -42,7 +42,23 @@ export default function Dashboard() {
                 {
                     name: "Toge",
                     link: '/Toge'
-                }
+                },
+                {
+                  name: "Kachou Fuugetsu",
+                  link: '/KachouFuugetsu'
+                },
+                {
+                  name: "Opposite World",
+                  link: '/OppositeWorld'
+                },
+                {
+                  name: "Memento of an Avaricious Beast",
+                  link: '/MementoOfAnAvariciousBeast'
+                },
+                {
+                  name: "Memento of All Organisms",
+                  link: '/MementoOfAllOrganisms'
+                },
             ]
         return (
             <Box
