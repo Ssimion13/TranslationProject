@@ -8,7 +8,7 @@ export default function Home() {
     <div className="App">
       <Grid> 
         <Link to="/Home">
-          <Typography> Aero Translations </Typography>
+          <Typography> Translations </Typography>
         </Link>
       </Grid>
     </div>
