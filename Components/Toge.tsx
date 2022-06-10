@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import "../App.css"
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 
@@ -11,12 +11,12 @@ export default function Toge() {
     <Grid container direction="column">
       <Grid item className="ytVideoContainer">
         <LiteYouTubeEmbed 
-          id="cLJf-5tFv4k"
+          id="cLJf-5tFv4k"  
           title="Toge"
           wrapperClass="yt-lite"
         />
       </Grid>
-      <Grid container item direction="column" className="textContainer" style={{marginTop: "30vh"}}>
+      <Grid container item direction="column" className="textContainer translationMarginTop">
           {/*(0:00 - 0:35s)*/}
           <Grid className="englishText"> movin' up & down <br/> </Grid>
           

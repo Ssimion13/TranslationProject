@@ -69,7 +69,7 @@ export default function Dashboard() {
             >
               <List>
                 {sectionOne.map((item, index) => (
-                  <Link to={item.link} key={`sectionOne-${index}`}>
+                  <Link className="navigationLink" to={item.link} key={`sectionOne-${index}`}>
                     <ListItem button>
                       <ListItemIcon>
                       </ListItemIcon>
@@ -81,10 +81,10 @@ export default function Dashboard() {
               <Divider />
               <List>
                 <ListItem>
-                  <Typography> Items </Typography>
+                  <Typography> Translations </Typography>
                 </ListItem>
                 {sectionTwo.map((item, index) => (
-                  <Link to={item.link} key={`sectionTwo-${index}`}>
+                  <Link className="navigationLink" to={item.link} key={`sectionTwo-${index}`}>
                     <ListItem>
                       <ListItemText primary={item.name} />
                     </ListItem>
@@ -105,7 +105,7 @@ export default function Dashboard() {
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" color="inherit">
-                    Aero Translations
+                    Translations
                 </Typography>
             </Toolbar>
             <Drawer

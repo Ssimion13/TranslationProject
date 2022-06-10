@@ -1,16 +1,10 @@
+* {
+  font-family: Roboto, sans-serif;  
+}
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -37,6 +31,19 @@
   }
 }
 
+/* About */
+
+.aboutGrid {
+  /* TODO these importants should not be necessary... */
+  margin: 8px 8px !important;
+}
+
+.headingSpacer {
+  margin: 8px 0px !important;
+}
+
+/* */
+
 
 /* Dashboard */
 .DashboardContainer {
@@ -54,6 +61,16 @@
 .navButtons {
   color: #999 !important;
 }
+
+/* */
+
+
+/* Navbar */
+.navigationLink {
+  text-decoration: none;
+  color: blue;
+}
+
 
 /* */
 
@@ -82,6 +99,10 @@
 
 .textContainer {
   margin: 24px 0px;
+}
+
+.translationMarginTop {
+  marginTop: 30vh;
 }
 
 .yt-lite {
@@ -115,8 +136,15 @@
 .yt-lite::after {
   content: "";
   display: block;
-  padding-bottom: calc(100% / (16 / 9));
+  padding-bottom: 40vh;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding-bottom: calc(100% / (16 / 9));
+  }
+}
+
 .yt-lite > iframe {
   width: 100%;
   height: 100%;

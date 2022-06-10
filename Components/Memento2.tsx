@@ -15,7 +15,18 @@ export default function Toge() {
           wrapperClass="yt-lite"
         />
       </Grid>
-      <Grid container item direction="column" className="textContainer" style={{marginTop: "30vh"}}>
+      <Grid container item direction="column" className="textContainer translationMarginTop">
+          <Grid container item justifyContent="space-around" alignItems="center">
+            <Grid item className="englishText">
+              This song is the final boss theme of the game <br/>
+              東方剛欲異聞 -- 水没した沈愁地獄 <br/>
+              Touhou Gouyoku Ibun ~ Suibotsushita Chinshuu Jigoku <br/>
+
+              The text below is from the creator's explanation for the song, <br/>
+              as well as his inspiration for both the music <br/> 
+              and the character of whom the song is for.  <br/>
+            </Grid>
+          </Grid>
           <Grid container item justifyContent="space-around" alignItems="center">
             <Grid item className="japaneseCharacterText">
               この世は不思議に満ちています。<br/>

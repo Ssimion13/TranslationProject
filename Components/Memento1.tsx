@@ -15,7 +15,7 @@ export default function Toge() {
           wrapperClass="yt-lite"
         />
       </Grid>
-      <Grid container item direction="column" className="textContainer" style={{marginTop: "30vh"}}>
+      <Grid container item direction="column" className="textContainer translationMarginTop">
           <Grid container item justifyContent="space-around" alignItems="center">
             <Grid item className="japaneseCharacterText">
               石油って４０年以上前から、後３０年で枯渇するって <br/>

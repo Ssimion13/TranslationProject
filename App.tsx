@@ -15,7 +15,7 @@ function App() {
           <Route path="/KachouFuugetsu" element={<KachouFuugetsu />} />
           <Route path="/MementoOfAnAvariciousBeast" element={<Memento1 />} />
           <Route path="/MementoOfAllOrganisms" element={<Memento2 />} />
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
     </div>
