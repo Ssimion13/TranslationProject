@@ -115,6 +115,14 @@
   cursor: pointer;
 }
 
+/* TODO stack these media queries! */
+@media only screen and (min-width: 600px) {
+  .yt-lite {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
 /* gradient */
 .yt-lite::before {
   content: '';

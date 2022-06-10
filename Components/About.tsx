@@ -1,6 +1,5 @@
-import { Grid, Typography } from '@mui/material';
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Grid, Typography } from '@mui/material';
 import "../App.css"
 
 export default function About() {
