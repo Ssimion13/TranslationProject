@@ -31,35 +31,42 @@ export default function Dashboard() {
             const sectionOne = [
                 {
                     name: 'Home',
-                    link: '/Home'
+                    link: '/Home',
+                    key: "one",
                 },               
-                {
-                    name: 'About',
-                    link: '/About'
-                } 
             ]
             const sectionTwo = [
                 {
                     name: "Toge",
-                    link: '/Toge'
+                    link: '/Toge',
+                    key: "two",
                 },
                 {
                   name: "Kachou Fuugetsu",
-                  link: '/KachouFuugetsu'
+                  link: '/KachouFuugetsu',
+                  key: "two",
                 },
                 {
                   name: "Opposite World",
-                  link: '/OppositeWorld'
+                  link: '/OppositeWorld',
+                  key: "two",
                 },
-                {
-                  name: "Memento of an Avaricious Beast",
-                  link: '/MementoOfAnAvariciousBeast'
-                },
-                {
-                  name: "Memento of All Organisms",
-                  link: '/MementoOfAllOrganisms'
-                },
+
             ]
+            const sectionThree = [
+              {
+                name: "Memento of an Avaricious Beast",
+                link: '/MementoOfAnAvariciousBeast',
+                key: "three",
+              },
+              {
+                name: "Memento of All Organisms",
+                link: '/MementoOfAllOrganisms',
+                key: "three",
+              },
+            ]
+            
+
         return (
             <Box
               sx={{width: 250}}
@@ -81,9 +88,22 @@ export default function Dashboard() {
               <Divider />
               <List>
                 <ListItem>
-                  <Typography> Translations </Typography>
+                  <Typography> Song Translations </Typography>
                 </ListItem>
                 {sectionTwo.map((item, index) => (
+                  <Link className="navigationLink" to={item.link} key={`sectionTwo-${index}`}>
+                    <ListItem>
+                      <ListItemText primary={item.name} />
+                    </ListItem>
+                  </Link>
+                ))}
+              </List>
+              <Divider />
+              <List>
+                <ListItem>
+                  <Typography> Text Translations </Typography>
+                </ListItem>
+                {sectionThree.map((item, index) => (
                   <Link className="navigationLink" to={item.link} key={`sectionTwo-${index}`}>
                     <ListItem>
                       <ListItemText primary={item.name} />

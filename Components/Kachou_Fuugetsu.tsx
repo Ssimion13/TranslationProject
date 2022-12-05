@@ -1,28 +1,44 @@
 import React from 'react';
-import { Grid } from '@mui/material';
+import { Grid, styled } from '@mui/material';
 import "../App.css"
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import CheckboxButtons from './common/CheckboxButtons';
 
 export default function Toge() {
+  const [isVideoOpen, setIsVideoOpen] = React.useState(true);
+  const [isJapaneseCharactersVisible, setIsJapaneseCharactersVisible] = React.useState(false);
+
   //TODO: selectively render the text depending on user settings, add a button for each type
   //TODO: Figure out why the overlay is so damn big on the youtube player...
+  const JapaneseCharacterGrid = styled(Grid)({
+    display: isJapaneseCharactersVisible ? "block" : "none"
+  }) as typeof Grid;
+
   return (
     <Grid container direction="column">
-      <Grid item className="ytVideoContainer">
+      {isVideoOpen &&
+        <Grid item className="ytVideoContainer">
         <LiteYouTubeEmbed 
           id="WM7biRZpgHM"
           title="Kachou_Fuugetsu"
           wrapperClass="yt-lite"
         />
-      </Grid>
+        </Grid>
+      }
+                <CheckboxButtons 
+            isVideoOpen={isVideoOpen} 
+            isJapaneseCharactersVisible={isJapaneseCharactersVisible}
+            setIsVideoOpen={() => setIsVideoOpen(!isVideoOpen)}
+            setIsJapaneseCharactersVisible={() => setIsJapaneseCharactersVisible(!isJapaneseCharactersVisible)}
+          />
       <Grid container item direction="column" className="textContainer translationMarginTop">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
             嗚呼　華のように鮮やかに　さあ <br/>
             嗚呼　鳥のように優雅に <br/> 
             嗚呼　風まかせも心地良い　さあ <br/>
             嗚呼　月明かり照らされて <br/>
-            </Grid> 
+            </JapaneseCharacterGrid> 
 
             <Grid item className="japaneseRomanizedText">
             aa hana no you ni azayaka ni saa <br/>
@@ -41,12 +57,12 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               正しさなんてもの <br/>
               人のモノサシによって変わる <br/>
               この世界　不変あるとするならば <br/>
               華鳥風月　厳かで美しいもの <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
 
             <Grid item className="japaneseRomanizedText">
               tadashisa nante mono <br/>
@@ -65,12 +81,12 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">    
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               後悔をして <br/>
               学び　また歩もう <br/>
               二度と過ち <br/>
               繰り返さぬように <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
 
             <Grid item className="japaneseRomanizedText">
               koukai wo shite <br/>
@@ -89,12 +105,12 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               歴史とは <br/>
               変わらぬ感情が <br/>
               廻り廻って　傷付けて和解された <br/>
               世界の成長 <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               rekishi to wa <br/>
               kawaranu kanjou ga <br/> 
@@ -113,13 +129,13 @@ export default function Toge() {
 
           
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               正しさなんてもの <br/>
               大人にも分からない幻想 <br/>
               この世界　不変あるとするならば <br/>
               華鳥風月　穏やかで懐かしきもの <br/>
 
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               tadashisa nante mono <br/>
               otona ni mo wakaranai gensou <br/>
@@ -137,14 +153,14 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               汚れぬことが <br/>
               正義なのだろうか？ <br/>
 
               過ちの中にあるけじめに <br/>
               魅せられ知った　穢れを恐れぬ愛も <br/>
               正しさと言う事 <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               yogorenu koto ga <br/>
               seigi na no darou ka? <br/>
@@ -166,7 +182,7 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="JapaneseCharacterText">
               だからこそ　愛を彷徨う <br/>
 
               悲しめる心も <br/>
@@ -175,7 +191,7 @@ export default function Toge() {
               何処までも美しくなれ <br/>
 
               いつまでも美しくなれ <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               dakara koso ai wo samayou <br/>
 

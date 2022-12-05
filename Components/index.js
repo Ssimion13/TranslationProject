@@ -1,4 +1,3 @@
-import About from "./About";
 import Home from "./Home";
 import Dashboard from "./Dashboard";
 import Toge from "./Toge";
@@ -8,7 +7,6 @@ import Memento1 from "./Memento1";
 import Memento2 from "./Memento2";
 
 export {
-    About,
     Home,
     Dashboard,
     Toge,

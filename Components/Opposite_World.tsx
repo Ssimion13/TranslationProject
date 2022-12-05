@@ -1,13 +1,23 @@
 import React from 'react';
-import { Grid } from '@mui/material';
-import "../App.css"
 import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import { Grid, styled } from '@mui/material';
+import "../App.css"
+import CheckboxButtons from './common/CheckboxButtons';
+
 
 export default function Toge() {
+  const [isVideoOpen, setIsVideoOpen] = React.useState(true);
+  const [isJapaneseCharactersVisible, setIsJapaneseCharactersVisible] = React.useState(false);
+
+  const JapaneseCharacterGrid = styled(Grid)({
+    display: isJapaneseCharactersVisible ? "block" : "none"
+  }) as typeof Grid;
+
   //TODO: selectively render the text depending on user settings, add a button for each type
   //TODO: Figure out why the overlay is so damn big on the youtube player...
   return (
     <Grid container direction="column">
+      {isVideoOpen &&
       <Grid item className="ytVideoContainer">
         <LiteYouTubeEmbed 
           id="GcLH_pmm8_M"
@@ -15,15 +25,22 @@ export default function Toge() {
           wrapperClass="yt-lite"
         />
       </Grid>
+      }
+        <CheckboxButtons 
+          setIsVideoOpen={() => {
+            return setIsVideoOpen(!isVideoOpen
+          )}}
+          setIsJapaneseCharactersVisible={() => setIsJapaneseCharactersVisible(isJapaneseCharactersVisible)}
+          />
       <Grid container item direction="column" className="textContainer translationMarginTop">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               間違いを正す　その心はあぁ <br/>
               朽ち果てた草や木に <br/>
               水をそそぐ様　だけれど <br/>
               意味もなくそれを　「善」　と感じて <br/>
               闇雲に向かう先　それを　「支配」　と呼ぶ <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
 
             <Grid item className="japaneseRomanizedText">
               machigai wo tadasu sono kokoro wa aa <br/>
@@ -44,12 +61,12 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               「明日は晴れる」　「きっと雨が降る」　などと当たり前に <br/>
               過ごした日々が　こんなに遠くになってしまうなんて <br/>
 
               -今- <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
 
             <Grid item className="japaneseRomanizedText">
               "ashita wa hareru" "kitto ame ga furu" nado to atari mae ni <br/>
@@ -69,13 +86,13 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               止まぬ霧雨　見えぬ光が <br/>
               世界を赤く　染め上げてしまうのか <br/>
               薄い記憶を　辿っていけば <br/>
               この血液は　覚えているのか <br/>
               争いの　「タネ」　を <br/>
-            </Grid> 
+            </JapaneseCharacterGrid> 
 
             <Grid item className="japaneseRomanizedText">
               yamanu kirisame mienu hikari ga <br/>
@@ -98,14 +115,14 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               そっと腰挂ける　背の高い座には <br/>
               見渡せる仕組みには作られていない <br/>
               それ故　その眼 <br/>
               (まなこ) <br/>
               頭　身体（を）駆使して <br/>
               目に見えぬ無意味にも　意味を生まれさせて <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
 
             <Grid item className="japaneseRomanizedText">
             sotto koshi kakeru se no takai za ni wa <br/>
@@ -124,13 +141,13 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               剣を向けた私にさえ <br/>
               優しく微笑み返す <br/>
             「これまでの戦いの意味」を <br/>　 
               忘れてしまう程に <br/>
               -何故？- <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               ken wo muketa watashi ni sae yasashiku hohoemi kaesu <br/>
               "koremade no tatakai no imi" wo wasurete shimau hodo ni <br/>
@@ -149,13 +166,13 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               得体の知れぬ生き方をする <br/>
               お前のような者も　有りと言える <br/>
               鏡を照らして合わせてみても <br/>
               全てが同じとは言えないから <br/>
               同じはないから <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               etai no shirenu iki kata wo suru <br/>
               omae no you na mono mo ari to ieru <br/>
@@ -175,13 +192,13 @@ export default function Toge() {
       </Grid>
       <Grid container item direction="column" className="textContainer">
           <Grid container item justifyContent="space-around" alignItems="center">
-            <Grid item className="japaneseCharacterText">
+            <JapaneseCharacterGrid item className="japaneseCharacterText">
               止まぬ霧雨　見えぬ光が <br/>
               世界を赤く　染め上げてしまうのか <br/>
               薄い記憶を　辿っていけば <br/>
               この血液は　覚えているのか <br/>
               争いの　「タネ」　を <br/>
-            </Grid>
+            </JapaneseCharacterGrid>
             <Grid item className="japaneseRomanizedText">
               yamanu kirisame mienu hikari ga <br/>
               sekai wo akaku someagete shimau no ka <br/>

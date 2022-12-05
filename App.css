@@ -1,10 +1,11 @@
 * {
-  font-family: Roboto, sans-serif;  
+  font-family: Roboto;
 }
 
 
 .App {
   text-align: center;
+  background-color: #caf0f8;
 }
 
 .App-header {
@@ -95,10 +96,14 @@
 .ytVideoContainer {
   position: sticky;
   top: 25px;
+  z-index: 100;
 }
 
 .textContainer {
-  margin: 24px 0px;
+  margin: 24px 0px !important;
+  padding: 8px !important;
+  border: 3px solid #00b4d8;
+  background-color: #90e0ef;
 }
 
 .translationMarginTop {
@@ -147,11 +152,12 @@
   padding-bottom: 40vh;
 }
 
-@media only screen and (max-width: 600px) {
+/* [console log] what was this for? */
+/* @media only screen and (max-width: 600px) {
   body {
     padding-bottom: calc(100% / (16 / 9));
   }
-}
+} */
 
 .yt-lite > iframe {
   width: 100%;
